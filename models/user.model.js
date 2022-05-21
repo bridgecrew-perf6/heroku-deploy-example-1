@@ -26,6 +26,10 @@ const User = db.define('user', {
     allowNull: false,
     defaultValue: 'normal',
   },
+/*   profileImageUrl: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  }, */
   status: {
     type: DataTypes.STRING,
     defaultValue: 'active',

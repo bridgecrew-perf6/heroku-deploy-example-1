@@ -10,7 +10,7 @@ const db = new Sequelize({
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB,
-  port: 54321,
+  port: process.env.DB_PORT || 5432,
   logging: false,
 });
 

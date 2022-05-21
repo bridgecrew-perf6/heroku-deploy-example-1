@@ -30,9 +30,9 @@ router.post('/', createUserValidations, checkValidations, createUser);
 
 router.post('/login', login);
 
-// Apply protectToken middleware. Todos los endpoints de abajo usarán el middleware de token, porque la lectura del código 
-// va de arriba hacia abajo, o sea, el protectToken va a afectar a todos y todos van a requerir 
-//que se les pase el token. Por eso se sacó el endpoint del createUser, porque no se le puede pedir un token, ya que es usuario nuevo. 
+// Apply protectToken middleware. Todos los endpoints de abajo usarán el middleware de token, porque la lectura del código
+// va de arriba hacia abajo, o sea, el protectToken va a afectar a todos y todos van a requerir
+//que se les pase el token. Por eso se sacó el endpoint del createUser, porque no se le puede pedir un token, ya que es usuario nuevo.
 router.use(protectToken);
 
 router.get('/', protectAdmin, getAllUsers);
